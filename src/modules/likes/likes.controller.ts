@@ -7,34 +7,19 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { CommentsService } from './likes.service';
+import { LikesService } from './likes.service';
 
-@Controller('comments')
-export class CommentsController {
-  constructor(private readonly commentsService: CommentsService) {}
+@Controller('likes')
+export class LikesController {
+  constructor(private readonly likesService: LikesService) {}
 
   @Post()
   create(@Body() body) {
-    return this.commentsService.create({ ...body });
+    return this.likesService.create({ ...body });
   }
 
-  @Get()
-  findAll() {
-    return this.commentsService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.commentsService.findOne(id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() body) {
-    return this.commentsService.update(id, { ...body });
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.commentsService.remove(id);
-  }
+//   @Delete(':id')
+//   remove(@Param('id') id: string) {
+//     return this.likesService.remove(id);
+//   }
 }
