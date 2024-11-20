@@ -1,43 +1,47 @@
-# Medium web
+## Medium web
+
+# Descrição
+Alteração do projeto para desenvolver um site semelhante ao Medium. Site de comentários e histórias. Para o Back-end, foi utilizado o framework Nest.JS. Para o banco de dados PostgreSQL com o ORM Prisma. Para o front-end utilizamos React.
+
+# Equipe:
+
+João Lucas
+Matias Fuks
+Michelli
+Roberto Gabriel
+Ruan
+
 
 ## Setup
 
-1. Install [POSTGRES](https://www.postgresql.org/) on your machine or use inside a docker container
+1. Instalar [POSTGRES](https://www.postgresql.org/) na maquina.
 
-2. Install [NODE](https://nodejs.org/pt)
+2. Instalar [NODE](https://nodejs.org/pt)
 
-3. Install Dependencies: Run the command bellow to install the project dependencies.
+3. Instalar dependencias: Rodar o comando abaixo.
 
 ```bash
 npm install
 ```
 
-5. Migrations: Run the commands below to create the database and update the tables
+4. Migrations: Rodar o comando abaixo para criar as tabelas do BD
 
 ```bash
 npm run prisma:migration:run
 ```
 
-6. Start the Project:
+5. Iniciar o projeto:
 
 ```bash
 npm run start:dev
 ```
 
-This will make the project available at http://localhost:3005
+O projeto estará disponível no endereço: http://localhost:3005
 
 ## Migrations
 
-1. To create a new migration open your terminal inside the project and run:
+1. Para criar uma nova migration, abrir o terminal e executar:
 
 ```bash
 npm run prisma:migration:create your_migration_name
-```
-
-## Seed
-
-1. To run your database seeds open your terminal inside the project and run:
-
-```bash
-npm run prisma:seed
 ```
